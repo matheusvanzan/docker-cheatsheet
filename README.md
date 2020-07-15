@@ -14,14 +14,14 @@ RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # no password for sudo
-COPY config/nopass /etc/sudoers.d/
+RUN echo "ALL ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/nopass
 ```
 
 Usage
 
 ```
 # build
-docker build --rm -t django-nginx:latest .
+docker build --rm -t docker-image:latest .
 
 # run
 docker run -p 8080:8080 -v $(pwd)/media:/home/docky/media docker-image
