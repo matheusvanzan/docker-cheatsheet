@@ -24,7 +24,7 @@ Usage
 docker build --rm -t django-nginx:latest .
 
 # run
-docker run -p 8080:8080 -v $(pwd)/media:/home/vanzan/media django-nginx
+docker run -p 8080:8080 -v $(pwd)/media:/home/docky/media docker-image
 ```
 
 Remove all
