@@ -33,6 +33,9 @@ Remove all
 # containers
 docker rm -vf $(docker ps -a -q)
 
+# containers inativos
+docker container prune
+
 # images
 docker rmi -f $(docker images -a -q)
 ```
