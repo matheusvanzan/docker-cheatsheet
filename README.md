@@ -1,4 +1,10 @@
 # Cheatsheet for Docker
+Docker compose
+
+```
+docker-compose build
+docker-compose up
+```
 
 Dockerfile
 
