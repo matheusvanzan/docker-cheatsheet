@@ -3,6 +3,10 @@
 Dockerfile
 
 ```
+# creator
+MANTAINER Matheus Vanzan
+LABEL mylabel
+
 # user
 ENV USER docky
 RUN useradd -ms /bin/bash $USER
@@ -15,12 +19,27 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 # no password for sudo
 RUN echo "ALL ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/nopass
+
+# workdir
+WORKDIR /home/docky
+
+# port
+EXPOSE 3000
+
+# last 
+ENTRYPOINT
 ```
 
 Usage Build
 
 ```
-# build
+# spec file
+docker build -f filename
+
+# spec tag
+docker build -t docker-image:latest
+
+# custom build
 docker build --rm -t docker-image:latest .
 ```
 
