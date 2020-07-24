@@ -43,19 +43,25 @@ docker run -d docker-image
 # run random port
 docker run -P docker-image
 
-# run
-docker run -p 8080:8080 -v $(pwd)/media:/home/docky/media docker-image
+# run with port
+docker run -p 8080:8080 docker-image
+
+# run with env var
+docker run -e MYENV=my_value"
+
+# run with volume
+docker run -v $(pwd)/media:/home/docky/media
 ```
 
-Remove all
+Bulk remove
 
 ```
-# containers
+# all containers
 docker rm -vf $(docker ps -a -q)
 
-# containers inativos
+# not active containers
 docker container prune
 
-# images
+# all images
 docker rmi -f $(docker images -a -q)
 ```
