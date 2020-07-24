@@ -23,6 +23,15 @@ Usage
 # build
 docker build --rm -t docker-image:latest .
 
+# run detatched
+docker run -d docker-image
+
+# run random port
+docker run -P docker-image
+
+# check port
+docker port image-hash
+
 # run
 docker run -p 8080:8080 -v $(pwd)/media:/home/docky/media docker-image
 ```
