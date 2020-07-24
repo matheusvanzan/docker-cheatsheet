@@ -17,20 +17,31 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 RUN echo "ALL ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/nopass
 ```
 
-Usage
+Usage Build
 
 ```
 # build
 docker build --rm -t docker-image:latest .
+```
+
+Usage Checks
+
+```
+# check port
+docker port image-hash
+```
+
+Usage Run
+
+```
+# run with name
+docker run --name meu-container
 
 # run detatched
 docker run -d docker-image
 
 # run random port
 docker run -P docker-image
-
-# check port
-docker port image-hash
 
 # run
 docker run -p 8080:8080 -v $(pwd)/media:/home/docky/media docker-image
