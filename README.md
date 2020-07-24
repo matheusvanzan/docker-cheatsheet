@@ -41,10 +41,10 @@ Usage Build
 docker build -f filename
 
 # spec tag
-docker build -t docker-image:latest
+docker build -t
 
-# custom build
-docker build --rm -t docker-image:latest .
+# complete custom
+docker build --rm -f Dockerfile -t username/docker-image:latest .
 ```
 
 Usage Checks
