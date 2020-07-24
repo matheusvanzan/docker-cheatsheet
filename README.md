@@ -7,6 +7,10 @@ Dockerfile
 MANTAINER Matheus Vanzan
 LABEL mylabel
 
+# files
+COPY
+ADD
+
 # user
 ENV USER docky
 RUN useradd -ms /bin/bash $USER
