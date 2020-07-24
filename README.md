@@ -60,7 +60,7 @@ Usage Run
 # run with name
 docker run --name meu-container
 
-# run detatched
+# run detached
 docker run -d docker-image
 
 # run it
@@ -80,6 +80,9 @@ docker run -w /home/docky/
 
 # run with volume
 docker run -v $(pwd)/media:/home/docky/media
+
+# run in network
+docker run --network local-network
 ```
 
 Bulk remove
