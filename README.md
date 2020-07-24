@@ -40,6 +40,9 @@ docker run --name meu-container
 # run detatched
 docker run -d docker-image
 
+# run it
+docker run -it docker-image
+
 # run random port
 docker run -P docker-image
 
@@ -48,6 +51,9 @@ docker run -p 8080:8080 docker-image
 
 # run with env var
 docker run -e MYENV=my_value"
+
+# run with working dir (cd)
+docker run -w /home/docky/
 
 # run with volume
 docker run -v $(pwd)/media:/home/docky/media
