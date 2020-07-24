@@ -94,3 +94,10 @@ docker container prune
 # all images
 docker rmi -f $(docker images -a -q)
 ```
+
+Usage networks
+
+```
+docker network create --driver bridge local-network
+docker run --network local-network
+```
